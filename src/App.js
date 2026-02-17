@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {Usertable} from './components/Usertable/Usertable';
+
+const users = [
+  { id: 1, name: "Оля", age: 20, city: "Киев" },
+  { id: 2, name: "Игорь", age: 30, city: "Одесса" },
+  { id: 3, name: "Лена", age: 25, city: "Львов" }
+];
+
+const formatAge = (age) => age + " лет";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserTable users = {users} formatAge = {formatAge} />
     </div>
   );
 }
