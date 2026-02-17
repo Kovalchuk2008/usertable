@@ -1,4 +1,4 @@
-import './UserTable.css';
+import './Usertable.css';
 
 function UserRow(props) {
   const style = { color: props.young ? "red" : "black" };
@@ -29,17 +29,10 @@ export function UserTable(props) {
       </thead>
 
       <tbody>
-        {props.users.map(elem =>
-          <UserRow
-            key={elem.id}
-            user={elem}
-            formatAge={props.formatAge}
-            young={elem.age < 25}
-          />
-        )}
+        { props.users.map(elem => <UserRow key = {elem.id} user = {elem} formatAge = {props.formatAge} young = {elem.age < 25}/>)}
       </tbody>
     </table>
   );
 }
 
-export default UserTable;
+export default Usertable;
